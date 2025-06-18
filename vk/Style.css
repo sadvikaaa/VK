@@ -1,0 +1,187 @@
+<style>
+  :root {
+    --bg: #f7f5ff;
+    --card: white;
+    --text: #222;
+    --header: #000000; /* changed from #580063 */
+    --accent: #ffd700;
+    --footer: #000000; /* changed from violet to black */
+  }
+
+  body.dark-mode {
+    --bg: #1e1e2f;
+    --card: #2c2c3e;
+    --text: #f1f1f1;
+    --header: #000000;
+    --accent: #ffc107;
+    --footer: #000000;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header); /* black */
+    flex-wrap: wrap;
+    padding: 10px 20px;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+  }
+
+  .brand-name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  nav a:hover {
+    background-color: #222; /* darker black on hover */
+    border-radius: 5px;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .course-card {
+    background-color: var(--card);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+  }
+
+  .course-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .card-header {
+    background-color: #e0e0e0;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card-body {
+    display: none;
+    padding: 15px 20px;
+  }
+
+  .card-body ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .card-body li {
+    margin: 10px 0;
+  }
+
+  .card-body input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+  }
+
+  .card-body i {
+    color: var(--header); /* icon color to black */
+    margin-right: 6px;
+  }
+
+  .demo-banner {
+    text-align: center;
+    background: var(--accent);
+    color: black;
+    padding: 15px;
+    margin: 30px auto;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 90%;
+  }
+
+  .summary {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .summary button {
+    padding: 10px 25px;
+    font-size: 1em;
+    background-color: var(--header); /* black */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .summary button:hover {
+    background-color: green;
+  }
+
+  footer {
+    background-color: var(--footer);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+  }
+
+  /* Motion Animation */
+  @keyframes clickEffect {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); /* black glow */
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .animate-click {
+    animation: clickEffect 0.3s ease;
+  }
+</style>
